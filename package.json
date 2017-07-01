@@ -1,0 +1,20 @@
+{
+  "name": "newsapp",
+  "version": "1.0.0",
+  "description": "Portal de Notícias",
+  "main": "news.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "javaScript"
+  ],
+  "author": "Diego Collares <diego.collares@gmail.com> (https://medium.com/@senhordim)",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.3"
+  }
+}
