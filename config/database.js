@@ -1,13 +1,15 @@
-// Mysql
-
 var mysql = require('mysql');
 
-module.exports = function () {
+var connMySql = function() {
   return mysql.createConnection({
     host : 'localhost',
     user : 'root',
-    password: '',
+    password : '',
     database : 'newsapp'
   });
+}
+
+module.exports = function() {
+  return connMySql;
 }
 
