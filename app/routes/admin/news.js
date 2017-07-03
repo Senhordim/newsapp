@@ -8,9 +8,9 @@ module.exports = function(application) {
     var news = req.body;
 
     var connection = application.config.database();
-    var newsModel = application.app.models.newsModel();
+    var newsModel = new application.app.models.News(connection);
 
-    newsModel.save(news, connection, function(error, result){
+    newsModel.save(news, function(error, result){
       // res.send(result);
       // res.send(news)
       res.redirect('/news');

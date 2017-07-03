@@ -4,9 +4,9 @@ module.exports = function(application) {
   application.get('/news', function(req, res){
 
     var connection = application.config.database();
-    var newsModel = application.app.models.newsModel();
+    var newsModel = new application.app.models.News(connection);
 
-    newsModel.index(connection, function(error, result){
+    newsModel.index(function(error, result){
       // res.send(result);
       res.render("news/index", {news : result});
     });
@@ -18,11 +18,11 @@ module.exports = function(application) {
 
     var paramsUrl = req.params.id;
     var connection = application.config.database();
-    var newsModel = application.app.models.newsModel();
+    var newsModel = new application.app.models.News(connection);
 
     console.log(paramsUrl);
 
-    newsModel.show(paramsUrl, connection, function(error, result){
+    newsModel.show(paramsUrl, function(error, result){
       // res.send(result);
       res.render("news/show", {news : result});
     });
