@@ -5,7 +5,7 @@ module.exports = function(){
   }
 
   this.show = function(connection, callback){
-    connection.query('select * from noticias where id = 2', callback);
+    connection.query('select * from noticias where id = 1', callback);
   }
 
   return this;
