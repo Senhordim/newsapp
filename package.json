@@ -14,6 +14,7 @@
   "author": "Diego Collares <diego.collares@gmail.com> (https://medium.com/@senhordim)",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "consign": "^0.1.6",
     "ejs": "^2.5.6",
     "express": "^4.15.3",
