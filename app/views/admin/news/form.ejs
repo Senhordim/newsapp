@@ -1,13 +1,21 @@
 
+    <% if(validation) { %>
+        <ul>
+          <% for(var i = 0; i < validation.length; i++) { %>
+            <li> <%= validation[i].msg %> </li>
+          <% } %>
+        </ul>
+    <% } %>
+
   <form action="/admin/news/save" method="post">
     <label>Título</label>
-    <input type="text" name="title" id="news_title" placeholder="Insira o título da matéria">
+    <input type="text" name="title" id="news_title" value="<%= news.title %>" placeholder="Insira o título da matéria">
     <br/>
     <label>Descrição</label>
-    <textarea name="resume" id="news_resume" rows="5" cols="30"></textarea>
+    <textarea name="resume" id="news_resume" rows="5" cols="30"><%= news.resume %></textarea>
     <br/>
     <label>Notícia</label>
-    <textarea name="body" id="news_body" rows="5" cols="30"></textarea>
+    <textarea name="body" id="news_body" rows="5" cols="30"><%= news.body %></textarea>
     <br/>
     <input type="radio" name="public" value="1" > Publicar
     <br>
