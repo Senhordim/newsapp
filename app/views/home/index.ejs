@@ -7,5 +7,10 @@
 </head>
 <body>
   <h2>Págiia Inicial</h2>
+  <% for(i=0; i< news.length; i++) { %>
+    <h2><%= news[i].title %></h2>
+    <h3><%= news[i].resume %></h3>
+    <a href="news/<%= news[i].id %>">Ver notícia</a>
+  <% } %>
 </body>
 </html>
