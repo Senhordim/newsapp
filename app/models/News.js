@@ -14,4 +14,8 @@ News.prototype.save = function(news, callback){
   this._connection.query('insert into news set ? ', news, callback);
 }
 
+News.prototype.getLastNesws = function(callback){
+  this._connection.query('select * from news where public = 1 order by created_at desc limit 5', callback)
+}
+
 module.exports = function(){ return News }
